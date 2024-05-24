@@ -1,10 +1,10 @@
 namespace: default
 resources:
-  - nginx.yml
-  - mysql.yml
-  - backend.yml
-  - frontend.yml
-  - redis.yml
+  - nginx.yaml
+  - mysql.yaml
+  - backend.yaml
+  - frontend.yaml
+  - redis.yaml
 configMapGenerator:
   - name: nginx
     files:
