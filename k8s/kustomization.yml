@@ -1,7 +1,7 @@
 namespace: default
 resources:
   - nginx.yml
-  - mariadb.yml
+  - mysql.yml
   - backend.yml
   - frontend.yml
   - redis.yml
