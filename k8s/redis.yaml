@@ -17,17 +17,17 @@ spec:
         image: redis:alpine
         ports:
           - containerPort: 6379
-        volumeMounts:
-          - mountPath: /data
-            name: redis-storage
-  volumeClaimTemplates:
-  - metadata:
-      name: redis-storage
-    spec:
-      accessModes: ["ReadWriteOnce"]
-      resources:
-        requests:
-          storage: 1Gi
+  #       volumeMounts:
+  #         - mountPath: /data
+  #           name: redis-storage
+  # volumeClaimTemplates:
+  # - metadata:
+  #     name: redis-storage
+  #   spec:
+  #     accessModes: ["ReadWriteOnce"]
+  #     resources:
+  #       requests:
+  #         storage: 1Gi
 
 ---
 apiVersion: v1
