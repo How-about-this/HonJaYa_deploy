@@ -21,16 +21,16 @@ spec:
               value: Asia/Seoul
             - name: DATABASE_URL
               value: jdbc:mysql://mysql:3306/honjaya
-			- name: DATABASE_USERNAME
-			  value: myusername
-			- name: DATABASE_PASSWORD
-			  value: mypassword
-			- name: JWT_SECRET
-			  value: O9HnV8bd+WBo6ZNFKqcKjDPAkCGXb6JWTc7Pv7IUWy4=
-			- name: REDIS_HOST
-			  value: redis
-			- name: REDIS_PORT
-			  value: 6379
+            - name: DATABASE_USERNAME
+              value: myusername
+            - name: DATABASE_PASSWORD
+              value: mypassword
+            - name: JWT_SECRET
+              value: O9HnV8bd+WBo6ZNFKqcKjDPAkCGXb6JWTc7Pv7IUWy4=
+            - name: REDIS_HOST
+              value: redis
+            - name: REDIS_PORT
+              value: 6379
           resources:
             requests:
               memory: 1Gi

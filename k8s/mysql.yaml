@@ -24,10 +24,10 @@ spec:
               value: root
             - name: MYSQL_DATABASE
               value: honjaya
-			- name: MYSQL_USERNAME
-			  value: myusername
-			- name: MYSQL_PASSWORD
-			  value: mypassword
+            - name: MYSQL_USERNAME
+              value: myusername
+            - name: MYSQL_PASSWORD
+              value: mypassword
             - name: MARIADB_DISABLE_UPGRADE_BACKUP
               value: '1'
           volumeMounts:
