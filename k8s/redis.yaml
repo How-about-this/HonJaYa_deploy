@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: redis
-        image: redis:alpine
+        image: krmp-d2hub-idock.9rum.cc/dev-test/repo_7afb627da100
         ports:
           - containerPort: 6379
   #       volumeMounts:
