@@ -34,7 +34,7 @@ spec:
             - name: CLIENT_SECRET
               value: qOvMqL5ksCA74HfLsBkLf6A7LLTWAYcs
             - name: REDIRECT_URI
-              value: https://k30c2459efc03a.user-app.krampoline.com/api/login/oauth2/code/kakao
+              value: https://k8596b539d0daa.user-app.krampoline.com/api/login/oauth2/code/kakao
           resources:
             requests:
               memory: 1Gi
