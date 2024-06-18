@@ -17,24 +17,57 @@ spec:
           # 여러분의 backend image 주소를 입력해주세요.
           image: krmp-d2hub-idock.9rum.cc/dev-test/repo_7a573925eb94
           env:
-            - name: TZ
-              value: Asia/Seoul
             - name: DATABASE_URL
               value: jdbc:mysql://mysql:3306/honjaya
             - name: DATABASE_USERNAME
-              value: root
+              valueFrom:
+                secretKeyRef:
+                  name: honjaya-secret
+                  key: DATABASE_USERNAME
             - name: DATABASE_PASSWORD
-              value: root
+              valueFrom:
+                secretKeyRef:
+                  name: honjaya-secret
+                  key: DATABASE_PASSWORD
             - name: JWT_SECRET
-              value: O9HnV8bd+WBo6ZNFKqcKjDPAkCGXb6JWTc7Pv7IUWy4=
+              valueFrom:
+                secretKeyRef:
+                  name: honjaya-secret
+                  key: JWT_SECRET
             - name: REDIS_HOST
               value: redis
             - name: CLIENT_ID
-              value: f80b172c8fd2c4405878f3227740f910
+              valueFrom:
+                secretKeyRef:
+                  name: honjaya-secret
+                  key: CLIENT_ID
             - name: CLIENT_SECRET
-              value: qOvMqL5ksCA74HfLsBkLf6A7LLTWAYcs
+              valueFrom:
+                secretKeyRef:
+                  name: honjaya-secret
+                  key: CLIENT_SECRET
             - name: REDIRECT_URI
               value: https://k2b3bc621690aa.user-app.krampoline.com/api/login/oauth2/code/kakao
+            - name: S3_ACCESS_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: honjaya-secret
+                  key: S3_ACCESS_KEY
+            - name: S3_SECRET_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: honjaya-secret
+                  key: S3_SECRET_KEY
+            - name: ADMIN_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: honjaya-secret
+                  key: ADMIN_KEY
+            - name: SERVER_URL
+              value: https://k2b3bc621690aa.user-app.krampoline.com
+            - name: SUCCESS_URL
+              value: https://k2b3bc621690aa.user-app.krampoline.com
+            - name: 
           resources:
             requests:
               memory: 1Gi
