@@ -67,7 +67,6 @@ spec:
               value: https://k2b3bc621690aa.user-app.krampoline.com
             - name: SUCCESS_URL
               value: https://k2b3bc621690aa.user-app.krampoline.com
-            - name: 
           resources:
             requests:
               memory: 1Gi
